@@ -1,4 +1,4 @@
-# Lane Detection With Computer Vision
+# Simulink PID Algorithm
 This project is a Python-based lane detection system that uses OpenCV for real-time identification of road lanes. It combines Canny Edge Detection to identify edges and Hough Line Transform to detect lane lines in video frames. The model is optimized for accurate lane boundary detection, making it suitable for autonomous driving and road analysis tasks.
 
 <img width="1281" alt="Screenshot 2024-10-08 at 8 53 05 PM" src="https://github.com/user-attachments/assets/19aa2886-ba62-40d1-84fc-d13ee020db7c">
