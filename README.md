@@ -1,16 +1,22 @@
 # Simulink PID Algorithm
-This project is a Python-based lane detection system that uses OpenCV for real-time identification of road lanes. It combines Canny Edge Detection to identify edges and Hough Line Transform to detect lane lines in video frames. The model is optimized for accurate lane boundary detection, making it suitable for autonomous driving and road analysis tasks.
+A simple Simulink model demonstrating PID control of a first-order system. The model calculates error from a setpoint, processes it through proportional, integral, and derivative components, and minimizes the error using feedback.
 
-<img width="1281" alt="Screenshot 2024-10-08 at 8 53 05 PM" src="https://github.com/user-attachments/assets/19aa2886-ba62-40d1-84fc-d13ee020db7c">
+![image](https://github.com/user-attachments/assets/f38cb9ba-3f1c-4caa-b64c-dd5eeccd709a)
 
 
 ## How It's Made:
 
-**Tech used:** Python.
+**Tech used:** Simulink.
 
 The lane detection system processes video frames that can be obtained typically from a dashcam by first converting each frame into a grayscale to simplify edge detection; then, A Gaussian blur is applied to reduce noise, which is then followed by canny edge detection to find the edges and potential lane boundaries. A region of interest is masked, and the Hough Line Transform detects straight lines within the region. Finally, detected lanes are overlapped onto the original video frame, providing real-time lane lines.
 
-## Optimizations
-Optimizing the lane detection system involves improving processing speed and accuracy. Using Gaussian blur helps reduce noise while keeping details needed for edge detection. I also had to determine the appropriate threshold for cany edge detection to ensure that only relevant edges were identified. 
+The PID controller is built in Simulink using basic blocks. The error is calculated as the difference between the setpoint and system output. The error then feeds into the proportional integral and derivative branches, each scaled with adjustable gains. The output of the branches is then summed to generate the control signal, which drives the first-order system in a closed-loop system. 
+
+The graph below illustrates how the system adjusts until it reaches its set point.
+
+![image](https://github.com/user-attachments/assets/bdceac45-8e63-4b92-a7bb-2dde05eda564)
+
+
+
 
 
